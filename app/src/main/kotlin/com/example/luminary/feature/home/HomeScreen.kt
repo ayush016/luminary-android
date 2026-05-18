@@ -51,6 +51,7 @@ import coil3.compose.AsyncImage
 import com.example.luminary.data.model.Article
 import com.example.luminary.ui.component.CategoryChip
 import com.example.luminary.ui.component.ShimmerBox
+import com.example.luminary.ui.theme.AppBrushes
 import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalSharedTransitionApi::class)
@@ -215,20 +216,11 @@ private fun FeaturedArticleCard(
                         )
                 )
 
-                // Gradient overlay
+                // Gradient overlay — reads from theme tokens, not hardcoded black
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(
-                            Brush.verticalGradient(
-                                colors = listOf(
-                                    Color.Transparent,
-                                    Color.Black.copy(alpha = 0.2f),
-                                    Color.Black.copy(alpha = 0.75f)
-                                ),
-                                startY = 80f
-                            )
-                        )
+                        .background(AppBrushes.heroScrim())
                 )
 
                 // Category chip — top left
@@ -321,19 +313,11 @@ private fun ArticleCard(
                                 animatedVisibilityScope = animatedVisibilityScope
                             )
                     )
-                    // Bottom gradient on the image
+                    // Bottom gradient — uses scrim token, not hardcoded black
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
-                            .background(
-                                Brush.verticalGradient(
-                                    colors = listOf(
-                                        Color.Transparent,
-                                        Color.Black.copy(alpha = 0.4f)
-                                    ),
-                                    startY = 60f
-                                )
-                            )
+                            .background(AppBrushes.cardImageScrim())
                     )
                     CategoryChip(
                         category = article.category,

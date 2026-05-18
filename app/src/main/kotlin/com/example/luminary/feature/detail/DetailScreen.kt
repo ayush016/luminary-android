@@ -35,8 +35,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
@@ -46,6 +44,7 @@ import coil3.compose.AsyncImage
 import com.example.luminary.data.model.Article
 import com.example.luminary.ui.component.CategoryChip
 import com.example.luminary.ui.component.ShimmerBox
+import com.example.luminary.ui.theme.AppBrushes
 
 @OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
@@ -100,19 +99,11 @@ private fun DetailContent(
                                 animatedVisibilityScope = animatedVisibilityScope
                             )
                     )
-                    // Gradient overlay at bottom of image
+                    // Image fades into surface below — uses theme token via AppBrushes
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
-                            .background(
-                                Brush.verticalGradient(
-                                    colors = listOf(
-                                        Color.Transparent,
-                                        MaterialTheme.colorScheme.surface.copy(alpha = 0.85f)
-                                    ),
-                                    startY = 200f
-                                )
-                            )
+                            .background(AppBrushes.detailImageFade())
                     )
                 }
 
