@@ -141,10 +141,10 @@ private fun DrawScope.drawOpenBook(
                     right = cx - 2.dp.toPx(),
                     bottom = bookTop + bookH
                 ),
-                topLeftCornerRadius = CornerRadius(12.dp.toPx()),
-                topRightCornerRadius = CornerRadius(0f),
-                bottomRightCornerRadius = CornerRadius(0f),
-                bottomLeftCornerRadius = CornerRadius(12.dp.toPx())
+                topLeft = CornerRadius(12.dp.toPx()),
+                topRight = CornerRadius(0f),
+                bottomRight = CornerRadius(0f),
+                bottomLeft = CornerRadius(12.dp.toPx())
             )
         )
     }
@@ -165,10 +165,10 @@ private fun DrawScope.drawOpenBook(
                     right = bookLeft + bookW,
                     bottom = bookTop + bookH
                 ),
-                topLeftCornerRadius = CornerRadius(0f),
-                topRightCornerRadius = CornerRadius(12.dp.toPx()),
-                bottomRightCornerRadius = CornerRadius(12.dp.toPx()),
-                bottomLeftCornerRadius = CornerRadius(0f)
+                topLeft = CornerRadius(0f),
+                topRight = CornerRadius(12.dp.toPx()),
+                bottomRight = CornerRadius(12.dp.toPx()),
+                bottomLeft = CornerRadius(0f)
             )
         )
     }
