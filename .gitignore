@@ -4,9 +4,12 @@
 /.idea
 .DS_Store
 /build
+**/build/
 /captures
 .externalNativeBuild
 .cxx
 local.properties
 *.jks
 keystore.properties
+.kotlin/
+**/.kotlin/
