@@ -1,8 +1,33 @@
 # Luminary — Android Sample App
 
+> **This project was built entirely using the [android-lead-agent-skills](https://github.com/ayush016/android-lead-agent-skills) skill.**
+> Every pattern, architecture decision, animation, and design system choice in this codebase follows the guidance documented in that skill library. It serves as a living proof-of-concept for what the skill produces when applied end-to-end to a real Android project.
+
 A beautiful news reader app demonstrating production-grade Android UI patterns: shared element transitions, Material 3 design system, skeleton loading, staggered animations, and Clean Architecture.
 
-Built as a companion to the [android-lead-agent-skills](https://github.com/ayush016/android-lead-agent-skills) skill library.
+---
+
+## Built With the Android Lead Agent Skill
+
+This sample is the direct output of applying **[android-lead-agent-skills](https://github.com/ayush016/android-lead-agent-skills)** — a comprehensive Android engineering skill library covering architecture, Jetpack Compose, animations, performance, security, and more.
+
+Every file in this project traces back to a specific section of that skill:
+
+| What you see in the app | Skill reference used |
+|-------------------------|----------------------|
+| Shared element transitions (image + title) | [`shared-element-transitions.md`](https://github.com/ayush016/android-lead-agent-skills/blob/main/references/shared-element-transitions.md) |
+| Material 3 teal theme + serif typography | [`compose-ui-system.md`](https://github.com/ayush016/android-lead-agent-skills/blob/main/references/compose-ui-system.md) |
+| Skeleton shimmer loading states | [`compose-ui-system.md`](https://github.com/ayush016/android-lead-agent-skills/blob/main/references/compose-ui-system.md) |
+| Spring + stagger animations | [`motion-and-animation.md`](https://github.com/ayush016/android-lead-agent-skills/blob/main/references/motion-and-animation.md) |
+| Type-safe navigation + SharedTransitionLayout | [`navigation.md`](https://github.com/ayush016/android-lead-agent-skills/blob/main/references/navigation.md) |
+| StateFlow + SharedFlow(replay=0) | [`architecture.md`](https://github.com/ayush016/android-lead-agent-skills/blob/main/references/architecture.md) |
+| Sealed UI state (Loading/Ready/Error) | [`architecture.md`](https://github.com/ayush016/android-lead-agent-skills/blob/main/references/architecture.md) |
+| Offline-first Flow repository | [`data-layer.md`](https://github.com/ayush016/android-lead-agent-skills/blob/main/references/data-layer.md) |
+| Hilt DI graph + @HiltViewModel | [`architecture.md`](https://github.com/ayush016/android-lead-agent-skills/blob/main/references/architecture.md) |
+| Coil3 image loading + SubcomposeAsyncImage | [`image-loading.md`](https://github.com/ayush016/android-lead-agent-skills/blob/main/references/image-loading.md) |
+| Edge-to-edge + WindowInsets | [`adaptive-layouts.md`](https://github.com/ayush016/android-lead-agent-skills/blob/main/references/adaptive-layouts.md) |
+| Convention plugins + version catalog | [`build-and-modules.md`](https://github.com/ayush016/android-lead-agent-skills/blob/main/references/build-and-modules.md) |
+| Canvas open-book illustration (Bookmarks) | [`compose-ui-system.md`](https://github.com/ayush016/android-lead-agent-skills/blob/main/references/compose-ui-system.md) |
 
 ---
 
@@ -54,12 +79,15 @@ Built as a companion to the [android-lead-agent-skills](https://github.com/ayush
 
 | Library | Version | Purpose |
 |---------|---------|---------|
-| Jetpack Compose | BOM 2024.12.01 | UI |
-| Navigation Compose | 2.8.5 | Type-safe navigation |
+| AGP | 8.5.2 | Android Gradle Plugin |
+| Gradle | 8.7 (pinned via wrapper) | Build system |
+| Jetpack Compose | BOM 2024.09.00 | UI |
+| Navigation Compose | 2.8.4 | Type-safe navigation |
 | Hilt | 2.52 | Dependency injection |
 | Coil3 | 3.0.4 | Image loading |
 | Lifecycle | 2.8.7 | `collectAsStateWithLifecycle` |
 | kotlinx.serialization | 1.7.3 | Navigation route serialization |
+| KSP | 2.0.21-1.0.25 | Kotlin Symbol Processing (Hilt) |
 
 ---
 
@@ -67,8 +95,9 @@ Built as a companion to the [android-lead-agent-skills](https://github.com/ayush
 
 1. Clone: `git clone https://github.com/ayush016/luminary-android`
 2. Open in Android Studio Ladybug (2024.2.1) or newer
-3. Run on a device or emulator with API 24+
-4. Images load from `picsum.photos` — internet connection required
+3. Let Android Studio download Gradle 8.7 via the wrapper (first sync only)
+4. Run on a device or emulator with **API 26+** (Android 8.0+)
+5. Images load from `picsum.photos` — internet connection required
 
 No API keys or configuration needed.
 
